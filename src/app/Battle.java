@@ -2,6 +2,7 @@ package app;
 
 import entity.Char;
 import entity.DiceRoll;
+import entity.FixedRoll;
 import items.Weapon;
 
 public class Battle {
@@ -10,8 +11,8 @@ public class Battle {
 		Char hero = new Char("Sir Gallahad", 14, 5, 80);
 		Char monster = Char.goblinFactory();
 
-		hero.setWeapon(new Weapon("Exo blade", new DiceRoll(2, 5)));
-		monster.setWeapon(new Weapon("Flames of ruin", new DiceRoll(2, 3)));
+		hero.setWeapon(new Weapon("Exo blade", new FixedRoll(5, 6, 7)));
+		monster.setWeapon(new Weapon("Flames of ruin", new DiceRoll(1, 20)));
 
 		while (hero.isAlive() && monster.isAlive()) {
 			if (hero.isDying() && hero.hasPotion()) {

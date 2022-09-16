@@ -1,8 +1,9 @@
 package entity;
 
 import java.util.Random;
+import interfaces.Rollable;
 
-public class DiceRoll {
+public class DiceRoll implements Rollable {
 
 	private static Random random;
 
